@@ -456,7 +456,7 @@
          (lf (if (or content-multiline? block-tag?)
                  "\n")))
     (concat "<" tag-name id classes props (if self-closing?
-                                              "/>"
+                                              (if (eq major-mode 'html-mode) ">" " />")
                                             (concat ">" (if content
                                                             (if (or content-multiline? block-tag?)
                                                                 (zencoding-indent content)
