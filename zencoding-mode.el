@@ -382,7 +382,9 @@
 (defvar zencoding-self-closing-tags
   '("br"
     "img"
-    "input"))
+    "input"
+    "link"
+    "meta"))
 
 (defvar zencoding-leaf-function nil
   "Function to execute when expanding a leaf node in the
