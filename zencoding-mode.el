@@ -380,11 +380,22 @@
   '("p"))
 
 (defvar zencoding-self-closing-tags
-  '("br"
+  '("area"
+    "base"
+    "br"
+    "col"
+    "command"
+    "embed"
+    "hr"
     "img"
     "input"
+    "keygen"
     "link"
-    "meta"))
+    "meta"
+    "param"
+    "source"
+    "track"
+    "wbr"))
 
 (defvar zencoding-leaf-function nil
   "Function to execute when expanding a leaf node in the
