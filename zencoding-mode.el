@@ -587,16 +587,16 @@
                  ("#q.x.y.z"               "<div id=\"q\" class=\"x y z\">"
                                            "</div>")
                  ;; Empty tags
-                 ("a/"                     "<a/>")
-                 ("a/.x"                   "<a class=\"x\"/>")
-                 ("a/#q.x"                 "<a id=\"q\" class=\"x\"/>")
-                 ("a/#q.x.y.z"             "<a id=\"q\" class=\"x y z\"/>")
+                 ("a/"                     "<a />")
+                 ("a/.x"                   "<a class=\"x\" />")
+                 ("a/#q.x"                 "<a id=\"q\" class=\"x\" />")
+                 ("a/#q.x.y.z"             "<a id=\"q\" class=\"x y z\" />")
                  ;; Self-closing tags
-                 ("input type=text"        "<input type=\"text\"/>")
-                 ("img"                    "<img/>")
+                 ("input type=text"        "<input type=\"text\" />")
+                 ("img"                    "<img />")
                  ("img>metadata/*2"        "<img>"
-                                           "    <metadata/>"
-                                           "    <metadata/>"
+                                           "    <metadata />"
+                                           "    <metadata />"
                                            "</img>")
                  ;; Siblings
                  ("a+b"                    "<a></a>"
@@ -658,8 +658,8 @@
                  ("a*1"                    "<a></a>")
                  ("a*2"                    "<a></a>"
                                            "<a></a>")
-                 ("a/*2"                   "<a/>"
-                                           "<a/>")
+                 ("a/*2"                   "<a />"
+                                           "<a />")
                  ("a*2+b*2"                "<a></a>"
                                            "<a></a>"
                                            "<b></b>"
@@ -681,8 +681,8 @@
                                            "    <b id=\"q\" class=\"x\"></b>"
                                            "</a>")
                  ("a#q.x>b/#q.x*2"         "<a id=\"q\" class=\"x\">"
-                                           "    <b id=\"q\" class=\"x\"/>"
-                                           "    <b id=\"q\" class=\"x\"/>"
+                                           "    <b id=\"q\" class=\"x\" />"
+                                           "    <b id=\"q\" class=\"x\" />"
                                            "</a>")
                  ;; Properties
                  ("a x"                    "<a x=\"\"></a>")
@@ -694,11 +694,11 @@
                  ("a x m"                  "<a x=\"\" m=\"\"></a>")
                  ("a x= m=\"\""            "<a x=\"\" m=\"\"></a>")
                  ("a x=y m=l"              "<a x=\"y\" m=\"l\"></a>")
-                 ("a/ x=y m=l"             "<a x=\"y\" m=\"l\"/>")
+                 ("a/ x=y m=l"             "<a x=\"y\" m=\"l\" />")
                  ("a#foo x=y m=l"          "<a id=\"foo\" x=\"y\" m=\"l\"></a>")
                  ("a.foo x=y m=l"          "<a class=\"foo\" x=\"y\" m=\"l\"></a>")
                  ("a#foo.bar.mu x=y m=l"   "<a id=\"foo\" class=\"bar mu\" x=\"y\" m=\"l\"></a>")
-                 ("a/#foo.bar.mu x=y m=l"  "<a id=\"foo\" class=\"bar mu\" x=\"y\" m=\"l\"/>")
+                 ("a/#foo.bar.mu x=y m=l"  "<a id=\"foo\" class=\"bar mu\" x=\"y\" m=\"l\" />")
                  ("a x=y+b"                "<a x=\"y\"></a>"
                                            "<b></b>")
                  ("a x=y+b x=y"            "<a x=\"y\"></a>"
